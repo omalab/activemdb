@@ -219,7 +219,7 @@ module MDBTools
   # helper to turn table names into standard format method names.
   # Inside, it's just ActionView::Inflector.underscore
   def methodize(table_name)
-    ActiveSupport::Inflector.underscore table_name.gsub(' ','_')
+    ::ActiveSupport::Inflector.underscore table_name.gsub(' ','_')
   end
   
   def backends
